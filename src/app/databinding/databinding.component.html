@@ -1,0 +1,18 @@
+<h1>Data Binding</h1>
+
+<h3>Interpolação de Dados</h3>
+<h2>Nome: {{nomeprof}}</h2>
+
+<div [style]="divStyle">
+    <h3>Property Binding</h3>
+    <img [src]="imgurl" [alt]="altimg">
+</div>
+<div>
+    <h3>Event Binding</h3>
+    <input type="text" name="" id="">
+    <button (click)="alterarnome()">Alterar Nome</button>
+</div>
+<div>
+    <h3>Two-Way Data Binding</h3>
+    <input type="text" [(ngModel)]="nomeprof">
+</div>

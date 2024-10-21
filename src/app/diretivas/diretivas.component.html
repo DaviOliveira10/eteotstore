@@ -1,0 +1,21 @@
+<div style="background-color: azure; height: 100px; text-align: center;">
+    <h3>Diretivas Angular</h3>
+</div>
+
+<label for="check">Liga / Desliga</label>
+<input type="checkbox" name="check" [checked]="ligado" (change)="ligado = !ligado">
+<h3 style="background-color: yellow; height: 100px;"
+        *ngIf="ligado"
+>ESTÁ LIGADO</h3>
+
+<ul>Lista de Alunos da Turma 352</ul>
+<li *ngFor="let aluno of turma">{{aluno}}</li>
+
+<select {([(ngModel)]="opcao")}>Selecione um aluno
+    <option *ngFor="let aluno of turma" value="={{turma.id}}>{{turma.nome}}"></option>
+</select>
+<div [ngSwitch]="opcao">
+    <p *ngSwitchCase="8">Davi</p>
+    <p *ngSwitchCase="7">Cristiano Ronaldo</p>
+</div>
+<h1>{{opcao}}</h1>
